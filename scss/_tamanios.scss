@@ -1,0 +1,19 @@
+$full-width:100%;
+$half-width:50%;
+$font-desktop:1.2rem;
+$font-h-desktop:3rem;
+$font-mobile:1rem;
+$font-h-mobile:2.7rem;
+$vista-mobile:768px;
+
+@mixin padding($top,$right,$bottom,$left){
+    padding-top:$top;
+    padding-bottom:$bottom;
+    padding-right:$right;
+    padding-left:$left;
+}
+
+@mixin img-responsive($width,$height){
+    width:$width;
+    height: $height;
+}

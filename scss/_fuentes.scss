@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+$font-ubuntu: 'Ubuntu', sans-serif;
+
+li{ 
+    padding:10px;
+    list-style: none;
+    font-size:$font-desktop;
+    text-transform: uppercase;
+    a {
+        font-family: $font-ubuntu;
+        text-decoration: none;
+        transition: all 2s;
+        padding:5px;
+        &:hover {
+            border-bottom: 1px solid black;
+        }
+    }
+}
+
+h1{
+    font: {
+    size:$font-h-desktop;
+    family: $font-ubuntu;
+    }
+    text-align: center;
+    @media only screen and(max-width:$vista-mobile){
+        font-size:$font-h-mobile;
+    }
+}
+
+h3{
+    font: {
+        size:2rem;
+        family: $font-ubuntu;
+    }
+    text-align: center;
+    @media only screen and(max-width:$vista-mobile){
+        font-size:2rem;
+    }
+}
+
+h5{
+    font: {
+        size:1.1rem;
+        family: $font-ubuntu;
+    }
+    text-align: center;
+    @media only screen and(max-width:$vista-mobile){
+        font-size:1.1rem;
+    }
+}
+
+p{
+    font: {
+        family: $font-ubuntu;
+    }
+    text-align: center;
+    @media only screen and(max-width:$vista-mobile){
+        font-size:$font-mobile;
+    }
+}

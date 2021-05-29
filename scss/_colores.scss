@@ -1,0 +1,53 @@
+$azul:rgb(0,0,255);
+$verde:hsl(120, 100%, 25%);
+$negro:invert(white);
+$blanco:invert(black);
+
+$estilos: (
+  celeste: #1383eb,
+  amarillo: #ffc400,
+  amarilloCopy: #fbff00,
+  verde:hsl(120, 100%, 25%),
+  gris:#b1b1b1
+);
+
+@mixin fondo($color){
+  @if map-has-key($estilos, $color){
+    background-color: map-get($estilos, $color);
+  } 
+}
+@mixin color($color){
+    @if map-has-key($estilos, $color){
+        color: map-get($estilos, $color);
+    }
+}
+a{
+    @include color(verde);
+
+}
+header{
+    @include fondo(gris);
+}
+footer {
+    @include fondo(amarilloCopy);
+}
+.copy{
+    @include fondo(amarillo)
+}
+// establish social media colors
+$social: (
+  'facebook': #3b5999,
+  'twitter': #55acee,
+  'linkedin': #0077B5,
+  'google': #dd4b39,
+);
+
+// loop, to style social media links
+@each $name, $color in $social {
+  // selector based on href name
+  [href*='#{$name}'] {  
+    &::before {
+      content: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/15542/#{$name}.png);
+    }
+  }
+}
